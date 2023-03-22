@@ -1,7 +1,57 @@
 /* RESET */
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
+
+/* MAIN */
+
+
+/* .container {
+    display: flex;
+} */
+
+/* .navbar {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 5rem;
+	background-color: rgb(20,25,34, 0.5);
+} */
+
+/* .navbar a {
+    background-color: transparent;
+    color: white;
+    font-size: .7em;
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+    padding: .5em 2em;
+    border-radius: 2rem;
+    border: 1px solid white;
+} */
+
+/* .menu {
+    background-color: black;
+    width: 230px;
+    height: 100%;
+    padding-top: 5rem;
+    z-index: 99;
+} */
+
+/* .home {
+    background-color: rgb(20,25,34);
+	height: calc(100vh - 5rem);
+	overflow-y: auto;
+    padding-top: 6rem;
+} */
+
+/* .player {
+    height: 5rem;
+	background-color: rgb(40,40,40);
+} */
+
