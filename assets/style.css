@@ -77,7 +77,6 @@ li {
     padding-inline: .7rem;
     font-size: 13px;
     font-weight: 600;
-
 }
 
 /* SECTION PLAYED */
@@ -112,13 +111,21 @@ li {
     color: white;
     text-align: center;
     padding-top: 1rem;
+    font-size: 14px;
 }
 
 .album p {
     color: rgb(124,126,131);
     text-align: center;
     padding-top: .5rem;
+    font-size: 12px;
+    font-weight: 600;
 }
+
+
+/* SECTION USER */
+
+
 
 /* NAVBAR */
 
