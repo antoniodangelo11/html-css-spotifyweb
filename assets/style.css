@@ -44,8 +44,6 @@ li {
     border: 1px solid rgb(255, 255, 255);
 }
 
-/* CENTRAL CONTENT */
-
 .container {
     display: flex;
     margin: auto;
@@ -53,18 +51,20 @@ li {
 
 .side-menu {
     background-color: rgb(0, 0, 0);
-    flex: 0 0 20%;
+    flex: 0 0 15%;
     height: calc(100vh - 5rem);
-    padding-top: 5rem;
     z-index: 99;
 }
 
+/* CENTRAL CONTENT */
+
 .main-content {
     background-color: rgb(20,25,34);
-    flex: 0 0 80%;
+    flex: 0 0 85%;
 	height: calc(100vh - 5rem);
     padding-top: 6rem;
-	overflow-y: auto;
+    padding-inline: 1rem;
+    overflow-y: auto;
 }
 
 .top-menu {
@@ -79,14 +79,13 @@ li {
     font-weight: 600;
 }
 
-/* SECTION PLAYED */
+/* ALBUMS SECTION */
 
-.played {
-    padding-inline: 1rem;
+.albums-section {
     padding-top: 3rem;
 }
 
-.played h2 {
+.albums-section h2 {
     color: rgb(255, 255, 255);
 }
 
@@ -97,18 +96,17 @@ li {
 }
 
 .album {
-    width: 300px;
-    height: 300px;
+    width: calc((100% - 2 * 1rem) / 6);
 }
 
 .album img {
     display: block;
 	width: 100%;
-	object-fit: cover;
+	/* object-fit: cover; */
 }
 
 .album h3 {
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding-top: 1rem;
     font-size: 14px;
@@ -121,11 +119,6 @@ li {
     font-size: 12px;
     font-weight: 600;
 }
-
-
-/* SECTION USER */
-
-
 
 /* NAVBAR */
 
