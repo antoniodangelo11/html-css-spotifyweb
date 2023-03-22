@@ -44,7 +44,7 @@ li {
     border: 1px solid rgb(255, 255, 255);
 }
 
-.container {
+.container-flex {
     display: flex;
     margin: auto;
 }
@@ -63,12 +63,14 @@ li {
     flex: 0 0 85%;
 	height: calc(100vh - 5rem);
     padding-top: 6rem;
+    padding-bottom: 5rem;
     padding-inline: 1rem;
     overflow-y: auto;
 }
 
 .top-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -77,6 +79,7 @@ li {
     padding-inline: .7rem;
     font-size: 13px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 /* ALBUMS SECTION */
@@ -89,20 +92,31 @@ li {
     color: rgb(255, 255, 255);
 }
 
+.albums-section p {
+    color: rgb(124,126,131);
+    padding-top: .5rem;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 .albums {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 2rem;
     gap: 1rem;
 }
 
 .album {
-    width: calc((100% - 2 * 1rem) / 6);
+    width: calc((100% - 5 * 1rem) / 6);
 }
 
 .album img {
     display: block;
 	width: 100%;
-	/* object-fit: cover; */
+}
+
+.radius img {
+    border-radius: 50%;
 }
 
 .album h3 {
