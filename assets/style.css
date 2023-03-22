@@ -44,23 +44,74 @@ li {
     border: 1px solid rgb(255, 255, 255);
 }
 
-.container-flex {
+/* CENTRAL CONTENT */
+
+.central-container {
     display: flex;
     margin: auto;
 }
+
+/* SIDE MENU */
 
 .side-menu {
     background-color: rgb(0, 0, 0);
     flex: 0 0 15%;
     height: calc(100vh - 5rem);
     z-index: 99;
+    padding-inline: 1rem;
 }
 
-/* SIDE MENU */
+.side-menu img {
+    width: 150px;
+    padding-top: 1rem;
+}
+
+/* MENU UP */
+
+.menu-up {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-up li > img {
+    width: 25px;
+}
+
+.menu-up li > span {
+    color: rgb(124,126,131);
+    font-size: 14px;
+    vertical-align: super;
+}
+
+/* MENU DOWN */
+
+.menu-down {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu-down li > h3 {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding-top: 1rem;
+}
+
+.menu-down li > i {
+    background-color: rgb(124,126,131);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 8px;
+    
+}
+
+.menu-down > li {
+    color: rgb(124,126,131);
+    font-size: 14px;
+}
 
 
-
-/* CENTRAL CONTENT */
+/* MAIN CONTENT */
 
 .main-content {
     background-color: rgb(20,25,34);
@@ -71,6 +122,8 @@ li {
     padding-inline: 1rem;
     overflow-y: auto;
 }
+
+/* TOP-MENU */
 
 .top-menu {
     display: flex;
