@@ -13,9 +13,8 @@ html {
     font-weight: 500;
 }
 
-li, span {
+li {
     list-style: none;
-    cursor: pointer;
 }
 
 /* MAIN */
@@ -38,11 +37,15 @@ li, span {
     font-size: .7rem;
     position: absolute;
     top: 1.5rem;
-    right: .5rem;
+    right: 1.5rem;
     padding: .7rem 2rem;
     border-radius: 2rem;
     text-decoration: none;
     border: 1px solid rgb(255, 255, 255);
+}
+
+.upgrade a:hover {
+    transform: scale(1.2)
 }
 
 /* CENTRAL CONTENT */
@@ -113,9 +116,14 @@ li, span {
     color: rgb(124,126,131);
     font-size: 14px;
     vertical-align: super;
+    cursor: pointer;
 }
 
 .menu-up li:first-child span {
+    color: rgb(255, 255, 255);
+}
+
+.menu-up li > span:hover {
     color: rgb(255, 255, 255);
 }
 
@@ -134,7 +142,7 @@ li, span {
     padding-top: 1rem;
 }
 
-.menu-center li > i {
+.menu-center li span > i {
     background-color: rgb(124,126,131);
     color: rgb(0, 0, 0);
     font-size: 20px;
@@ -142,9 +150,19 @@ li, span {
     margin-right: .2rem;
 }
 
+.menu-center li span > i:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
 .menu-center > li {
     color: rgb(124,126,131);
     font-size: 14px;
+}
+
+.menu-center li:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 /* MENU DOWN */
@@ -162,6 +180,11 @@ li, span {
     color: rgb(124,126,131);
     font-size: 14px;
     vertical-align: top;
+    cursor: pointer;
+}
+
+.install:hover {
+    color: rgb(255, 255, 255);
 }
 
 .bar::after {
@@ -238,6 +261,12 @@ li, span {
     font-weight: 600;
     white-space: nowrap;
 }
+
+.top-menu li > a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
 
 /* ALBUMS SECTION */
 
