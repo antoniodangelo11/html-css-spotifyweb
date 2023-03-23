@@ -13,8 +13,9 @@ html {
     font-weight: 500;
 }
 
-li {
+li, span {
     list-style: none;
+    cursor: pointer;
 }
 
 /* MAIN */
@@ -88,6 +89,20 @@ li {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    position: relative;
+}
+
+.menu-up::before {
+    content: "";
+    display: block;
+    background-color: rgb(173,255,47);
+    position: absolute;
+    top: 2%;
+    left: -8%;
+    bottom: 0;
+    height: 25px;
+    border-radius: 10px;
+    width: 3px;
 }
 
 .menu-up li > img {
@@ -369,6 +384,10 @@ li {
         height: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    .menu-up::before {
+        display: none;
     }
     
     .menu-up li > img {
