@@ -59,15 +59,26 @@ li {
     z-index: 99;
     padding-inline: 1rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.side-menu > img {
+/* LOGO */
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+}
+
+.logo-big {
     width: 120px;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    display: block;
 }
 
-.side-menu .logo-small {
+.logo-small {
     display: none;
 }
 
@@ -76,6 +87,7 @@ li {
 .menu-up {
     display: flex;
     flex-direction: column;
+    gap: .5rem;
 }
 
 .menu-up li > img {
@@ -88,9 +100,14 @@ li {
     vertical-align: super;
 }
 
+.menu-up li:first-child span {
+    color: rgb(255, 255, 255);
+}
+
 /* MENU CENTER */
 
 .menu-center {
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -118,11 +135,45 @@ li {
 /* MENU DOWN */
 
 .menu-down {
-    align-self: flex-end;
+   display: flex;
+   flex-direction: column;
 }
 
-.menu-down li > img {
-    width: 10px;
+.dwn-icon {
+    width: 15px;
+}
+
+.install {
+    color: rgb(124,126,131);
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.bar::after {
+    content: "";
+    display: block;
+    background-color: rgb(124,126,131);
+    height: 1px;
+    margin-top: .5rem;
+}
+
+.profile {
+    margin-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.profile-img {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(128,128,128);
+    border-radius: 50%;
+    
+}
+
+.profile-name {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    vertical-align: super;
 }
 
 /* MAIN CONTENT */
@@ -252,26 +303,28 @@ li {
 @media (max-width: 600px) {
 
     .side-menu {
-        background-color: rgb(0, 0, 0);
         flex: 0 0 50px;
         height: calc(100vh - 5rem);
         padding-inline: 1rem;
         overflow: hidden;
-    }
+    } 
 
-    .side-menu > img {
+    /* LOGO */
+
+    .logo-big {
         display: none;
     }
 
-    .side-menu .logo-small {
+    .logo-small {
         width: 25px;
-        padding-top: 1rem;
+        padding-top: 1.5rem;
         display: block;
     }
 
     /* MENU UP */
 
     .menu-up {
+        height: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -292,11 +345,32 @@ li {
 
     /* MENU DOWN */
 
+    .menu-down span {
+        display: none;
+    }
 
+    .bar::after {
+        display: none;
+    }
+
+    .dwn-icon {
+        margin-left: 0.2rem;
+    }
 }
 
 
 /* ALBUMS SECTION */
+
+@media (max-width: 1400px)   {
+    .albums {
+        --cols: 6;
+        --gap:  1rem;
+    }
+
+    .album {
+        width: calc((100% - 5 * var(--gap)) / var(--cols));
+    }
+}
 
 @media (max-width: 1100px)   {
     .albums {
@@ -319,3 +393,36 @@ li {
         width: calc((100% - 1 * var(--gap)) / var(--cols));
     }
 }
+
+@media (max-width: 400px)   {
+
+    .top-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-menu li {
+        padding: .5rem;
+    }
+
+    .top-menu li.active::after {
+        bottom: 10%;
+    }
+
+    .albums {
+        --cols: 1;
+        --gap:  1rem;
+    }
+
+    .albums-section h2, p {
+        text-align: center;
+    }
+
+
+    .album {
+        width: calc((100% - 0 * var(--gap)) / var(--cols));
+    }
+}
+
+
+
