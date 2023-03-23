@@ -37,8 +37,8 @@ li {
     font-size: .7rem;
     position: absolute;
     top: 1.5rem;
-    right: 1.5rem;
-    padding: .5rem 2rem;
+    right: .5rem;
+    padding: .7rem 2rem;
     border-radius: 2rem;
     text-decoration: none;
     border: 1px solid rgb(255, 255, 255);
@@ -48,24 +48,27 @@ li {
 
 .central-container {
     display: flex;
-    margin: auto;
 }
 
 /* SIDE MENU */
 
 .side-menu {
     background-color: rgb(0, 0, 0);
-    flex: 0 0 15%;
+    flex: 0 0 230px;
     height: calc(100vh - 5rem);
     z-index: 99;
     padding-inline: 1rem;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-.side-menu img {
-    width: 150px;
+.side-menu > img {
+    width: 120px;
     padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.side-menu .logo-small {
+    display: none;
 }
 
 /* MENU UP */
@@ -85,41 +88,50 @@ li {
     vertical-align: super;
 }
 
-/* MENU DOWN */
+/* MENU CENTER */
 
-.menu-down {
+.menu-center {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.menu-down li > h3 {
+.menu-center li > h3 {
     color: rgb(255, 255, 255);
     font-size: 14px;
     padding-top: 1rem;
 }
 
-.menu-down li > i {
+.menu-center li > i {
     background-color: rgb(124,126,131);
     color: rgb(0, 0, 0);
     font-size: 20px;
     padding: 8px;
-    
+    margin-right: .2rem;
 }
 
-.menu-down > li {
+.menu-center > li {
     color: rgb(124,126,131);
     font-size: 14px;
 }
 
+/* MENU DOWN */
+
+.menu-down {
+    align-self: flex-end;
+}
+
+.menu-down li > img {
+    width: 10px;
+}
 
 /* MAIN CONTENT */
 
 .main-content {
     background-color: rgb(20,25,34);
-    flex: 0 0 85%;
 	height: calc(100vh - 5rem);
-    padding-top: 6rem;
+    flex: 1 0 0;
+    padding-top: 5rem;
     padding-bottom: 5rem;
     padding-inline: 1rem;
     overflow-y: auto;
@@ -135,8 +147,27 @@ li {
 }
 
 .top-menu li {
-    color: rgb(124,126,131);
+    padding: 1rem;
     padding-inline: .7rem;
+    position: relative;
+}
+
+.top-menu li.active::after {
+    content: "";
+    display: block;
+    background-color: rgb(173,255,47);
+    position: absolute;
+    bottom: 20%;
+    left: 35%;
+    right: 35%;
+    height: 3px;
+    border-radius: 20px;
+    
+}
+
+.top-menu li > a {
+    text-decoration: none;
+    color: rgb(124,126,131);
     font-size: 13px;
     font-weight: 600;
     white-space: nowrap;
@@ -145,7 +176,7 @@ li {
 /* ALBUMS SECTION */
 
 .albums-section {
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
 }
 
 .albums-section h2 {
@@ -160,23 +191,28 @@ li {
 }
 
 .albums {
+    --cols: 6;
+    --gap:  1rem;
+
     display: flex;
     flex-wrap: wrap;
     padding-top: 2rem;
-    gap: 1rem;
+    gap: var(--gap);
 }
 
 .album {
-    width: calc((100% - 5 * 1rem) / 6);
+    width: calc((100% - 5 * var(--gap)) / var(--cols));
 }
 
 .album img {
     display: block;
 	width: 100%;
+    aspect-ratio: 1/1;
 }
 
 .radius img {
     border-radius: 50%;
+    aspect-ratio: 1/1;
 }
 
 .album h3 {
@@ -200,12 +236,86 @@ li {
     background-color: rgb(40,40,40);
     height: 5rem;
     width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 100;
 }
 
 
 /* MEDIA QUERY */
 
-@media (max-width: 700px) {
+
+/* SIDE MENU */
+
+@media (max-width: 600px) {
+
+    .side-menu {
+        background-color: rgb(0, 0, 0);
+        flex: 0 0 50px;
+        height: calc(100vh - 5rem);
+        padding-inline: 1rem;
+        overflow: hidden;
+    }
+
+    .side-menu > img {
+        display: none;
+    }
+
+    .side-menu .logo-small {
+        width: 25px;
+        padding-top: 1rem;
+        display: block;
+    }
+
+    /* MENU UP */
+
+    .menu-up {
+        display: flex;
+        flex-direction: column;
+    }
     
+    .menu-up li > img {
+        width: 25px;
+    }
+    
+    .menu-up li > span {
+        display: none;
+    }
+
+    /* MENU CENTER */
+
+    .menu-center {
+        display: none;
+    }
+
+    /* MENU DOWN */
+
+
+}
+
+
+/* ALBUMS SECTION */
+
+@media (max-width: 1100px)   {
+    .albums {
+        --cols: 4;
+        --gap:  1rem;
+    }
+
+    .album {
+        width: calc((100% - 3 * var(--gap)) / var(--cols));
+    }
+}
+
+@media (max-width: 700px)   {
+    .albums {
+        --cols: 2;
+        --gap:  1rem;
+    }
+
+    .album {
+        width: calc((100% - 1 * var(--gap)) / var(--cols));
+    }
 }
