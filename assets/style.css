@@ -295,12 +295,32 @@ li {
 
 .album {
     width: calc((100% - 5 * var(--gap)) / var(--cols));
+    position: relative;
 }
+
+/* .ply-hover {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 20rem;
+    opacity: 0;
+}
+
+.ply-hover:hover {
+    opacity: 1;
+} */
 
 .album img {
     display: block;
 	width: 100%;
     aspect-ratio: 1/1;
+    
 }
 
 .radius img {
@@ -334,6 +354,11 @@ li {
     right: 0;
     bottom: 0;
     z-index: 100;
+    padding-inline: 1.5;
+}
+
+.play-left img {
+    width: 30px;
 }
 
 
