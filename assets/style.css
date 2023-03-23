@@ -17,7 +17,7 @@ li {
     list-style: none;
 }
 
-/* MAIN */
+/* START MAIN */
 
 /* TOPBAR */
 
@@ -266,8 +266,6 @@ li {
     color: rgb(255, 255, 255);
 }
 
-
-
 /* ALBUMS SECTION */
 
 .albums-section {
@@ -340,7 +338,6 @@ li {
 
 
 /* MEDIA QUERY */
-
 
 @media (max-width: 1400px)   {
 
