@@ -362,7 +362,6 @@ nav {
     bottom: 0;
     z-index: 100;
     display: flex;
-    flex-wrap: wrap;
 }
 
 /* PLAY LEFT */
@@ -400,9 +399,7 @@ nav {
     flex-wrap: wrap;
     color: rgb(124,126,131);
     gap: .8rem;
-    padding-left: 2.5rem;
 }
-
 
 /* PLAY CENTER */
 
@@ -411,8 +408,8 @@ nav {
     flex: 0 0 60%;
     display: flex;  
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding-top: 1rem;
 }
 
 .play-center-icon {
@@ -421,12 +418,12 @@ nav {
     gap: 2rem;
 }
 
-.play-icon {
+.play-center-icon {
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
 }
 
-.big-circle {
+.play-center-icon :nth-child(3) {
     color: rgb(255, 255, 255);
     font-size: 2rem;
 }
@@ -434,22 +431,61 @@ nav {
 .play-bar {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
-.big-bar {
+.minute {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-inline: 1rem;
+}
+
+.bkg-grey {
     background-color: rgb(124,126,131);
     height: 4px;
     width: 50%;
     border-radius: 20px;
 }
 
+.bkg-white {
+    background-color: rgb(255, 255, 255);
+    height: 4px;
+    width: 30%;
+    border-radius: 20px;
+}
 
 /* PLAY RIGHT */
 
 .play-right {
     height: 100%;
     flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding-right: .5rem;
+}
+
+.play-right-icon {
+    display: flex;
+    color: rgb(255, 255, 255);
+    gap: 1rem;
+}
+
+.volume-bar {
+    background-color: rgb(124,126,131);
+    height: 4px;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.small-bar {
+    background-color: rgb(255, 255, 255);
+    height: 4px;
+    width: 30%;
+    border-radius: 20px;
 }
 
 
