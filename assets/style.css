@@ -447,6 +447,25 @@ nav {
     height: 4px;
     width: 50%;
     border-radius: 20px;
+    position: relative;
+}
+
+.fa-circle {
+    position: absolute;
+    left: 28%;
+    top: -100%;
+    display: none;
+}
+
+.bkg-grey:hover .bkg-white {
+    background-color: rgb(171, 255, 46)
+}
+
+.bkg-grey:hover .fa-circle {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    display: unset;
+
 }
 
 .bkg-white {
