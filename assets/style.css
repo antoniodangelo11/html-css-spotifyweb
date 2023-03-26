@@ -447,25 +447,6 @@ nav {
     height: 4px;
     width: 50%;
     border-radius: 20px;
-    position: relative;
-}
-
-.fa-circle {
-    position: absolute;
-    left: 28%;
-    top: -100%;
-    display: none;
-}
-
-.bkg-grey:hover .bkg-white {
-    background-color: rgb(171, 255, 46)
-}
-
-.bkg-grey:hover .fa-circle {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    display: unset;
-
 }
 
 .bkg-white {
@@ -473,6 +454,26 @@ nav {
     height: 4px;
     width: 30%;
     border-radius: 20px;
+    position: relative;
+}
+
+.dot-big {
+    position: absolute;
+    left: 95%;
+    top: -120%;
+    z-index: 100;
+    display: none;
+}
+
+.bkg-grey:hover .bkg-white {
+    background-color: rgb(171, 255, 46)
+}
+
+.bkg-grey:hover .dot-big {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    display: unset;
+
 }
 
 /* PLAY RIGHT */
@@ -498,6 +499,7 @@ nav {
     height: 4px;
     width: 40%;
     border-radius: 20px;
+    
 }
 
 .small-bar {
@@ -505,7 +507,29 @@ nav {
     height: 4px;
     width: 30%;
     border-radius: 20px;
+    position: relative;
 }
+
+.small-dot {
+    position: absolute;
+    left: 80%;
+    top: -120%;
+    z-index: 100;
+    display: none;
+}
+
+.volume-bar:hover .small-bar {
+    background-color: rgb(171, 255, 46)
+}
+
+.volume-bar:hover .small-dot {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    display: unset;
+}
+
+
+
 
 /* MEDIA QUERY */
 
