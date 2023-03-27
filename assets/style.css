@@ -384,12 +384,12 @@ nav {
 }
 
 .play-left-text > h4 {
-    font-size: 12px;
+    font-size: 14px;
     color: rgb(255, 255, 255);
 }
 
 .play-left-text > p {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 600;
     color: rgb(124,126,131);
 }
@@ -397,8 +397,12 @@ nav {
 .play-left-icon {
     display: flex;
     flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.play-left-icon > a {
     color: rgb(124,126,131);
-    gap: .8rem;
+    
 }
 
 /* PLAY CENTER */
@@ -418,7 +422,7 @@ nav {
     gap: 2rem;
 }
 
-.play-center-icon {
+.play-center-icon > a {
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
 }
@@ -499,6 +503,8 @@ nav {
     height: 4px;
     width: 40%;
     border-radius: 20px;
+    max-width: 150px;
+    min-width: 50px
     
 }
 
@@ -527,8 +533,6 @@ nav {
     color: rgb(255, 255, 255);
     display: unset;
 }
-
-
 
 
 /* MEDIA QUERY */
